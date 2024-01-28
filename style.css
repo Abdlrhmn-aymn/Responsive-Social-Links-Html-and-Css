@@ -1,0 +1,121 @@
+:root {
+    --ff--sans: 'Inter', sans-serif;
+
+    --fw--light: 400;
+    --fw--normal: 600;
+    --fw--bold: 700;
+
+    --fs--400: 14px;
+
+    --clr--green: hsl(75, 94%, 57%);
+    --clr--white: hsl(0, 0%, 100%);
+    --clr--grey: hsl(0, 0%, 20%);
+    --clr--dark--grey: hsl(0, 0%, 12%);
+    --clr--off--black: hsl(0, 0%, 8%)
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff--sans);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr--off--black);
+    width: 100%;
+    margin: auto;
+}
+.container {
+    padding-top: 10px;
+    width: 380px;
+    height: 540px;
+    background-color: var(--clr--dark--grey);
+    border-radius: 10px;
+}
+
+.upper-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 220px;
+}
+
+.profile-pic {
+    margin-top: 15px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.name {
+    color: var(--clr--white);
+    font-weight: var(--fw--bold);
+    font-size: 1.5rem;
+}
+
+.location {
+    color: var(--clr--green);
+    font-size: var(--fs--400);
+}
+
+.info {
+    color: var(--clr--white);
+    font-size: var(--fs--400);
+    font-weight: var(--fw--light);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.lower-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 300px;
+    /*margin-top: 10px;*/
+}
+
+button {
+    width: 300px;
+    height: 40px;
+    background-color: var(--clr--grey);
+    color: var(--clr--white);
+    border: none;
+    border-radius: 8px;
+    transition: ease-in-out 0.15s;
+    font-weight: var(--fw--normal);
+}
+
+button:hover {
+    background-color: var(--clr--green);
+    color: var(--clr--grey);
+}
+
+@media (max-width: 375px) {
+
+    body {
+        font-size: 0.5rem;
+    }
+
+    .container {
+        width: 300px;
+        font-size: 0.1rem;
+    }
+
+    .profile-pic {
+        width: 90px;
+        height: 90px;
+    }
+
+    button {
+        width: 250px;
+    }
+}
